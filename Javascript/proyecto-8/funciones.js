@@ -2,23 +2,18 @@ function siempre_bien() {
   return true;
 }
 
-function fun_asin() {}
-
-const mi_promes = new Promise((resolve, reject) => {
-  if (true) {
-    resolve();
-  } else {
-    reject();
-  }
-});
-
-mi_promes
-  .then(setTimeout((() => console.log("Hola soy una promesa"), 5000)))
-  .catch(() => console.log("ERROR"));
+function fun_asin() {
+  setTimeout(() => {
+    console.log("hola soy una promesa");
+  }, 5000);
+}
 
 function* generaIndice() {
-  let ind = 0;
+  let id = 0;
   while (true) {
-    yield (ind += 2);
+    yield (id += 2);
   }
 }
+const gen = generaIndice();
+console.log(gen.next());
+console.log(gen.next());
