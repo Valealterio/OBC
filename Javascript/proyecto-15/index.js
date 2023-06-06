@@ -6,4 +6,5 @@ let NyA = {
 }
 //sessionStorage.setItem("persona", JSON.stringify(NyA))
 //localStorage.setItem("persona", JSON.stringify(NyA))
-//document.cookie = "personita=NyA;expires=" + new Date(120000).toUTCString
+let now = new Date()
+//document.cookie = "personita=${JSON.stringify(NyA)};expires=${new Date(now.getTime() + 2 * 60000)}"
